@@ -1,0 +1,124 @@
+.app-header {
+  background: #fff;
+  border-bottom: 1px solid #f5f5f5;
+  margin-top: 20px;
+  width: 100%;
+  .container {
+    display: flex;
+    align-items: center;
+    width: 1220px;
+    height: 132px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .logo {
+    width: 200px;
+    margin: 0;
+     background: url('../../../assets/images/logo.png') no-repeat center 18px / contain;
+    a {
+      display: block;
+      height: 130px;
+      width: 100%;
+      text-indent: -9999px;
+      // background: url('../../../assets/images/logo.png') no-repeat center 18px / contain;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  .app-header-nav {
+    width: 820px;
+    display: flex;
+    padding-left: 40px;
+    position: relative;
+    z-index: 998;
+    list-style: none;
+    margin: 0;
+    padding-left: 40px;
+  
+    li {
+      margin-right: 40px;
+      width: 38px;
+      text-align: center;
+  
+      a {
+        font-size: 16px;
+        line-height: 32px;
+        height: 32px;
+        display: inline-block;
+        color: #333;
+        text-decoration: none;
+  
+        &:hover {
+          color: #27ba9b; // 对应原$xtxColor变量
+          border-bottom: 1px solid #27ba9b;
+        }
+      }
+  
+      .active {
+        color: #27ba9b;
+        border-bottom: 1px solid #27ba9b;
+      }
+    }
+  }
+
+  .search {
+    width: 170px;
+    height: 32px;
+    position: relative;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 32px;
+    margin-left: auto;
+
+    .search-icon {
+      font-size: 18px;
+      margin-left: 5px;
+      color: #999;
+    }
+
+    input {
+      width: 140px;
+      padding-left: 5px;
+      color: #666;
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 14px;
+    }
+  }
+
+  .cart {
+    width: 50px;
+    margin-left: 20px;
+
+    .curr {
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      position: relative;
+      display: block;
+      color: #333;
+      text-decoration: none;
+
+      .icon-cart {
+        font-size: 22px;
+      }
+
+      em {
+        font-style: normal;
+        position: absolute;
+        right: -10px;
+        top: -5px;
+        padding: 1px 6px;
+        line-height: 1;
+        background: #e02e24; // 对应原$helpColor变量
+        color: #fff;
+        font-size: 12px;
+        border-radius: 10px;
+        font-family: Arial;
+      }
+    }
+  }
+}
+    

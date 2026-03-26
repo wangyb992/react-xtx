@@ -1,0 +1,47 @@
+$priceColor: #cf4444; // 价格颜色
+
+.goods-item {
+  display: block;
+  width: 220px;
+  padding: 20px 30px;
+  text-align: center;
+  transition: all .5s;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+  }
+
+  img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+  }
+
+  p {
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .name {
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .desc {
+    color: #999;
+    height: 29px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .price {
+    color: $priceColor;
+    font-size: 20px;
+  }
+}

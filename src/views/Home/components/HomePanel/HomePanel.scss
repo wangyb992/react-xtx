@@ -1,0 +1,27 @@
+.home-panel {
+  background-color: #fff;
+  width: 1240px;
+  margin: 0 auto;
+}
+
+.home-panel .head {
+  padding: 40px 0;
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.home-panel .head h3 {
+  flex: 1;
+  font-size: 32px;
+  font-weight: normal;
+  margin-left: 6px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.home-panel .head h3 small {
+  font-size: 16px;
+  color: #999;
+  margin-left: 20px;
+}

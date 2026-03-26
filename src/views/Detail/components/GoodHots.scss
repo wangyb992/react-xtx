@@ -1,0 +1,57 @@
+$xtxColor: #27ba9b;
+$helpColor: #e26237;
+$sucColor: #1dc779;
+$warnColor: #ffb302;
+$priceColor: #cf4444;
+.goods-hot {
+  h3 {
+    height: 70px;
+    background: $helpColor;
+    color: #fff;
+    font-size: 18px;
+    line-height: 70px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  .goods-item {
+    display: block;
+    padding: 20px 30px;
+    text-align: center;
+    background: #fff;
+    text-decoration: none;
+
+    img {
+      width: 160px;
+      height: 160px;
+    }
+
+    p {
+      padding-top: 10px;
+      margin: 0;
+    }
+
+    .name {
+      font-size: 16px;
+      color: #000;
+    }
+
+    .desc {
+      color: #999;
+      height: 29px;
+    }
+
+    .price {
+      color: $priceColor;
+      font-size: 20px;
+    }
+  }
+}
+
+// 省略号样式
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

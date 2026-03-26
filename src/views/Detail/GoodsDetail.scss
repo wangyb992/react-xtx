@@ -1,0 +1,259 @@
+
+// 直接定义需要的颜色变量，而不是导入Less文件
+$primary-color: #1890ff; // Ant Design 主色
+$price-color: #f50;      // 价格颜色
+$text-color: #333;       // 主要文本颜色
+$text-color-secondary: #666; // 次要文本颜色
+$text-color-placeholder: #999; // 占位文本颜色
+$border-color: #e8e8e8;  // 边框颜色
+$background-color: #f5f5f5; // 背景色
+.xtx-goods-page {
+text-align: left;
+  .goods-info {
+    min-height: 600px;
+    background: #fff;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+    .media {
+      width: 580px;
+      height: 600px;
+      padding: 30px 50px;
+      
+      .preview-card {
+        border: none;
+        box-shadow: none;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .spec {
+      flex: 1;
+      padding: 30px 30px 30px 0;
+    }
+  }
+
+  .goods-footer {
+    display: flex;
+    gap: 20px;
+
+    .goods-article {
+      flex: 1;
+    }
+
+    .goods-aside {
+      width: 280px;
+    }
+  }
+
+  .goods-tabs {
+    min-height: 600px;
+    background: #fff;   
+    nav {
+    height: 70px;
+    line-height: 70px;
+    display: flex;
+    border-bottom: 1px solid #f5f5f5;
+    margin-left: 24px;
+    }
+  }
+
+  .g-name {
+    font-size: 22px;
+    margin-bottom: 16px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .g-desc {
+    color: #f50;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+  }
+
+  .g-price {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #fff8f0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+
+    span {
+      &::before {
+        content: "¥";
+        font-size: 14px;
+      }
+
+      &:first-child {
+        color: #f50;
+        margin-right: 10px;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      &:last-child {
+        color: #999;
+        text-decoration: line-through;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .g-service {
+    background: #f5f5f5;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 4px;
+
+    dl {
+      padding-bottom: 16px;
+      display: flex;
+      align-items: flex-start;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+
+      dt {
+        width: 60px;
+        color: #999;
+        font-weight: normal;
+        line-height: 1.5;
+      }
+
+      dd {
+        color: #666;
+        flex: 1;
+        margin: 0;
+        line-height: 1.5;
+
+        span {
+          margin-right: 16px;
+        }
+
+        a {
+          color: #1890ff;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  .goods-sales {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    margin-top: 20px;
+    border-top: 1px dashed #e8e8e8;
+    padding-top: 20px;
+
+    li {
+      flex: 1;
+      position: relative;
+      list-style: none;
+      padding: 0 10px;
+
+      &:not(:first-child)::after {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        height: 60px;
+        border-left: 1px solid #e4e4e4;
+        content: "";
+      }
+
+      p {
+        margin: 0;
+        line-height: 1.5;
+
+        &:first-child {
+          color: #999;
+          font-size: 14px;
+        }
+
+        &:nth-child(2) {
+          color: #f50;
+          margin-top: 6px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        &:last-child {
+          color: #666;
+          margin-top: 6px;
+          font-size: 14px;
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #1890ff;
+          }
+        }
+      }
+    }
+  }
+
+  .sku-selector {
+    border-top: 1px dashed #e8e8e8;
+    padding-top: 16px;
+  }
+
+  .action-buttons {
+    display: flex;
+  }
+
+  .bread-container {
+    padding: 16px 0;
+  }
+
+  .goods-detail {
+    padding: 24px;
+
+    .attrs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f0f0f0;
+
+      li {
+        display: flex;
+        margin-bottom: 12px;
+        width: 50%;
+        list-style: none;
+
+        .dt {
+          width: 100px;
+          color: #999;
+        }
+
+        .dd {
+          flex: 1;
+          color: #666;
+        }
+      }
+    }
+
+    .detail-images {
+      margin-top: 20px;
+      img {
+        width: 100%;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+    

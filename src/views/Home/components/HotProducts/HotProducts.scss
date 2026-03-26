@@ -1,0 +1,48 @@
+
+.hot-products {
+  .goods-list {
+  display: flex;
+  justify-content: space-between;
+  height: 426px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    width: 306px;
+    height: 406px;
+    transition: all .5s;
+    background: #eff4f1;
+
+    &:hover {
+      transform: translate3d(0, -3px, 0);
+      box-shadow: 0 3px 8px rgb(0 0 0 / 20%);
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      height: 100%;
+    }
+
+    img {
+      width: 306px;
+      height: 306px;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: 22px;
+      padding-top: 12px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .desc {
+      color: #999;
+      font-size: 18px;
+    }
+  }
+}
+}

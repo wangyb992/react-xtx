@@ -1,0 +1,171 @@
+// 引入全局变量（实际项目可根据需求调整路径）
+// @import '@/styles/variables.scss';
+
+// 替换原 Vue 中的 SASS 变量（与原样式保持一致）
+$xtxColor: #27ba9b; // 原 $xtxColor（主色）
+$priceColor: #cf4444; // 原 $priceColor（价格色）
+
+.home-category {
+  width: 250px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.8);
+  position: relative;
+  z-index: 99;
+
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      height: 55px;
+      line-height: 55px;
+      position: relative; // 为子弹层定位做准备
+      padding-left: 35px;
+      //左对齐
+      text-align: left;
+      &:hover {
+        background: $xtxColor;
+      }
+
+      a {
+        margin-right: 4px;
+        color: #fff;
+        text-decoration: none; // 清除 Link 默认下划线
+
+        &:first-child {
+          font-size: 16px;
+        }
+
+        //  hover 时保持文字颜色（避免继承父级 hover 样式冲突）
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      // 子分类弹层
+      .layer {
+        width: 990px;
+        height: 500px;
+        background: rgba(255, 255, 255, 0.8);
+        position: absolute;
+        left: 250px;
+        top: 0;
+        display: none; // 默认隐藏
+        padding: 0 15px;
+        box-sizing: border-box;
+
+        h4 {
+          font-size: 20px;
+          font-weight: normal;
+          line-height: 80px;
+          margin: 0;
+          color: #333;
+
+          small {
+            font-size: 16px;
+            color: #666;
+            margin-left: 10px;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          list-style: none;
+          margin: 0;
+          padding: 0;
+
+          li {
+            width: 310px;
+            height: 120px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            background: #fff;
+            padding: 0; // 清除父级 li 的 padding
+            line-height: normal; // 清除父级 line-height
+
+            // 第 3n 个 li 清除右侧 margin
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+
+            // 清除 li hover 背景（避免继承父级 hover 样式）
+            &:hover {
+              background: transparent;
+            }
+
+            a {
+              display: flex;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              padding: 10px;
+              color: #333; // 重置链接颜色（父级为白色，此处需改为深色）
+
+              &:hover {
+                background: #e3f9f4;
+                color: #333; //  hover 时保持深色
+              }
+
+              img {
+                width: 95px;
+                height: 95px;
+                object-fit: cover; // 确保图片比例正常
+              }
+
+              .info {
+                padding-left: 10px;
+                line-height: 24px;
+                overflow: hidden;
+                flex: 1; // 占满剩余宽度，避免文字溢出
+
+                .name {
+                  font-size: 16px;
+                  color: #666;
+                  margin: 0;
+                }
+
+                .desc {
+                  color: #999;
+                  margin: 0;
+                }
+
+                .price {
+                  font-size: 22px;
+                  color: $priceColor;
+                  margin: 0;
+
+                  i {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // 关键：li hover 时显示弹层
+      &:hover .layer {
+        display: block;
+      }
+    }
+  }
+}
+
+// 文本溢出省略样式（适配 1 行/2 行）
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ellipsis-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -1,0 +1,109 @@
+$xtxColor: #27ba9b; // 品牌主色
+
+.top-category {
+  h3 {
+    font-size: 28px;
+    color: #666;
+    font-weight: normal;
+    text-align: center;
+    line-height: 100px;
+    margin: 0;
+  }
+
+  .container {
+    width: 1240px;
+    margin: 0 auto;
+  }
+
+  .m-top-20 {
+    margin-top: 20px;
+  }
+
+  .sub-list {
+    margin-top: 20px;
+    background-color: #fff;
+
+    ul {
+      display: flex;
+      padding: 0 32px;
+      flex-wrap: wrap;
+      list-style: none;
+      margin: 0;
+
+      li {
+        width: 168px;
+        height: 160px;
+
+        a {
+          text-align: center;
+          display: block;
+          font-size: 16px;
+          text-decoration: none;
+          color: inherit;
+
+          img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+          }
+
+          p {
+            line-height: 40px;
+            margin: 0;
+          }
+
+          &:hover {
+            color: $xtxColor;
+          }
+        }
+      }
+    }
+  }
+
+  .ref-goods {
+    background-color: #fff;
+    margin-top: 20px;
+    position: relative;
+
+    .head {
+      .xtx-more {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+
+      .tag {
+        text-align: center;
+        color: #999;
+        font-size: 20px;
+        position: relative;
+        top: -20px;
+      }
+    }
+
+    .body {
+      display: flex;
+      justify-content: space-around;
+      padding: 0 40px 30px;
+    }
+  }
+
+  .bread-container {
+    padding: 25px 0;
+    padding-top: 0px;
+    .ant-breadcrumb {
+      font-size: 14px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .home-banner {
+    .ant-carousel {
+      width: 100%;
+    }
+  }
+}
