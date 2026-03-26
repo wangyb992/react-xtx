@@ -51,5 +51,55 @@ $priceColor: #cf4444;
     justify-content: center;
   }
 
+  .waterfall-goods-card {
+    display: block;
+    height: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
+
+    img {
+      width: 100%;
+      height: calc(100% - 96px);
+      min-height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    p {
+      margin: 8px 0 0;
+      line-height: 1.4;
+    }
+
+    .name {
+      color: #333;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .desc {
+      color: #999;
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .price {
+      color: $priceColor;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
 
 }
